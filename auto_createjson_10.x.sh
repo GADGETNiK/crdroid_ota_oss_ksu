@@ -5,7 +5,7 @@ path=/hdd/crdroid10_oss                                                         
 device=$(ls $path/out/target/product)                                                       # Here we get the name of the device based on the name of the folder
 time=$(cat $path/out/build_date.txt)                                                        # Here we get the build time
 zip=$(basename $path/out/target/product/$device/crDroidAndroid-14.0-*-$device-*-GAPPS.zip)        # Here we get the package name with the extension .zip
-nozip=$(basename $path/out/target/product/$device/crDroidAndroid-13.0-*-$device-*-GAPPS.zip .zip) # Here we get the package name without the extension .zip
+nozip=$(basename $path/out/target/product/$device/crDroidAndroid-14.0-*-$device-*-GAPPS.zip .zip) # Here we get the package name without the extension .zip
 date=$(echo $zip | cut -f3 -d '-')                                                          # Here we get the build date (in YYYY-MM-DD format)
 
   case "${device,,}" in 
